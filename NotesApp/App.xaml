@@ -1,0 +1,18 @@
+<Application x:Class="NotesApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:NotesApp"
+             xmlns:converters="clr-namespace:NotesApp.Converters">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/AppStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            
+            <!-- Add these basic brushes in case styles aren't loading -->
+            <SolidColorBrush x:Key="BackgroundBrush" Color="#F5F5F5"/>
+            <SolidColorBrush x:Key="SurfaceBrush" Color="#FFFFFF"/>
+            <converters:NotNullToBoolConverter x:Key="NotNullToBoolConverter"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
